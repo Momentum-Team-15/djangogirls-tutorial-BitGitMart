@@ -4,22 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>clifford's Corner</title>
+    <title>clifford's corner</title>
 </head>
 <body>
     <header>Welcome to clifford's corner.</header>
 
-    <article>
-        <h2><a href="">Cuddle Corner</a></h2>
+{% for post in posts %}
+    <article> 
+        <time>published: {{ post.published_date }}</time>
+        <h2><a href="">{{ post.title }}</a></h2>
+        <p>{{ post.text|linebreaksbr }}</p>
+        </article>
+{% endfor %}
+       <!-- <h2><a href="">Comfy corner</a></h2>
         <time>published: 18.10.2022, 20:56</time>
-        <p>where are platypus herds migrating 2022</p>
-    </article>
+        <p>what' sthe nearest place to meet beautiful ladys.hello my name is clifford.</p> --> 
 
-    <article>
-        <h2><a href="">Comfy corner</a></h2>
-        <time>published: 18.10.2022, 20:56</time>
-        <p>what' sthe nearest place to meet beautiful ladys.hello my name is clifford.</p>
-    </article>
-    
 </body>
 </html>
